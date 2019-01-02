@@ -1,0 +1,16 @@
+version: '2.3'
+
+services:
+  bash:
+    build:
+      context: ../.
+      dockerfile: ./docker/Dockerfile
+      network: host
+    image: fastai
+    command: bash
+    volumes:
+      - '../.:/app/src'
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    ports: ["${JNPORT:-6059}:${JNPORT:-8888}"]

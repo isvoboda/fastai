@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+torch = {file = "torch-1.0.0-cp36-cp36m-linux_x86_64.whl"}
+fastai = "*"
+jupyter = "*"
+
+[dev-packages]
+ipython = "*"
+
+[requires]
+python_version = "3.6"
